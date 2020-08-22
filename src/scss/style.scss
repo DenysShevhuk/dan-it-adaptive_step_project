@@ -1,0 +1,84 @@
+@import "mixins";
+@import "vars";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+html{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  min-width: 320px;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+@media (min-width: 481px) {
+  .container {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 993px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #fff;
+  background: $mainColor;
+  padding: 0.89em 2em;
+  border-radius: 50px;
+  border: 1px solid $mainColor;
+  user-select: none;
+
+  @include animate;
+
+  &:hover {
+    background: #fff;
+    color: $mainColor;
+  }
+}
+
+
+
+//@import "header";
+//
+//@import "present";
+//
+//@import "features";
+//
+//@import "testimonials";
+//
+//@import "pricing";
