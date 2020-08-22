@@ -1,0 +1,12 @@
+node_modules
+.vscode
+dist
+source_files
+package-lock.json
+/dist
+.idea
+node_modules/**/*
+build/**/*
+.idea/**/*
+*.iml
+*.xml
