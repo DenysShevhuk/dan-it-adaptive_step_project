@@ -11,6 +11,7 @@ const purifycss = require("gulp-purifycss");
 const del = require("del");
 const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
+const concat = require('gulp-concat');
 
 let source = "src";
 let distribution = "dist";
@@ -70,7 +71,8 @@ function css() {
         )
         .pipe(gulp.dest(path.build.css))
         .pipe(cleancss())
-        .pipe(rename({ extname: ".min.css" }))
+        .pipe(concat('styles.min.css'))
+        // .pipe(rename({ extname: ".min.css" }))
         .pipe(gulp.dest(path.build.css))
         .pipe(browsersync.stream());
 }
@@ -81,7 +83,8 @@ function js() {
         .pipe(fileinclude())
         .pipe(gulp.dest(path.build.js))
         .pipe(uglify())
-        .pipe(rename({ extname: ".min.js" }))
+        .pipe(concat('script.min.js'))
+        // .pipe(rename({ extname: ".min.js" }))
         .pipe(gulp.dest(path.build.js))
         .pipe(browsersync.stream());
 }
