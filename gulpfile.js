@@ -32,7 +32,7 @@ const path = {
         fonts: distribution + "/fonts/*.ttf",
     },
 
-    watch: {
+    dev: {
         html: source + "/",
         css: source + "/scss/**/*.scss",
         js: source + "/js/**/*.js",
@@ -105,13 +105,13 @@ function clean(params) {
 }
 
 function watchFiles(params) {
-    gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.js], js);
+    gulp.watch([path.dev.html], html);
+    gulp.watch([path.dev.css], css);
+    gulp.watch([path.dev.js], js);
 }
 
 let build = gulp.series(clean, gulp.parallel(html, css, js, img));
-let watch = gulp.series(build, gulp.parallel(watchFiles, sync));
+let dev = gulp.series(build, gulp.parallel(watchFiles, sync));
 
 exports.html = html;
 exports.css = css;
@@ -119,4 +119,5 @@ exports.js = js;
 exports.img = img;
 
 exports.build = build;
-exports.default = watch;
+exports.default = dev;
+

@@ -1,8 +1,8 @@
 {
   "name": "dan-it-adaptive_step_project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "step",
+  "main": "main.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
@@ -14,29 +14,30 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/gulp-file-include": "^0.14.4",
-    "browser": "^0.2.6",
-    "browser-sync": "^2.26.7",
-    "browserslist": "^4.12.0",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-file-include": "^2.2.2",
-    "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-purifycss": "^0.2.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify-es": "^2.0.0",
-    "node-sass": "^4.14.1"
-  },
-  "browserslist": [
-    "last 5 version"
-  ],
   "bugs": {
     "url": "https://gitlab.com/Denys_Shevchuk/dan-it-adaptive_step_project/issues"
   },
-  "homepage": "https://gitlab.com/Denys_Shevchuk/dan-it-adaptive_step_project#readme"
+  "homepage": "https://gitlab.com/Denys_Shevchuk/dan-it-adaptive_step_project#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-js-minify": "0.0.3",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "browser": "^0.2.6",
+    "browserslist": "^4.12.0",
+    "del": "^5.1.0",
+    "gulp-file-include": "^2.2.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {}
 }

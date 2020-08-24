@@ -8,3 +8,7 @@ build/**/*
 *.xml
 .vscode
 dist
+/node_modules/
+/build/
+/resource/
+/node_modules
