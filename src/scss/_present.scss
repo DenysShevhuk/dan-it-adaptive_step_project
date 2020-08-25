@@ -1,0 +1,135 @@
+@import "vars";
+@import "mixins";
+
+.social-count {
+  position: relative;
+  float: left;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #24292e;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 1px 0 hsla(0, 0%, 100%, .25);
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.btn {
+  color: #24292e;
+  background-color: #fafbfc;
+  //border-color: rgba(27, 31, 35, .15);
+  box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 1px 0 hsla(0, 0%, 100%, .25);
+  transition: background-color .2s cubic-bezier(.3, 0, .5, 1);
+  display: inline-block;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 0.89em 2em;
+  border-radius: 3px;
+  user-select: none;
+  border: 1px solid $mainColor;
+
+}
+
+.btn-sm {
+  padding: 2px 12px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.btn-with-count {
+  float: left;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tooltipped {
+  position: relative;
+}
+
+
+.present {
+  width: 100%;
+  height: 362px;
+
+  &__h {
+    color: $colorSectionText;
+    font-size: 30px;
+    text-transform: uppercase;
+    @include fontFamilyLato;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 23px;
+    line-height: 1.5em;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__div__text {
+    @include fontFamilyLato;
+    color: $textColor;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 34px;
+    line-height: 1.0em;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.present__div__buttons {
+  display: flex;
+  margin: 5px auto;
+  justify-content: center;
+}
+
+.present__div__a__buttons {
+  margin: 10px;
+}
+
+.div__buttons {
+  text-align: center;
+  padding-bottom: 88px;
+}
+
+@media (min-width: 481px) {
+
+  .present {
+    width: 100%;
+    height: 362px;
+
+    &__h {
+      font-size: 31px;
+    }
+
+    &__div__text {
+      font-size: 15px;
+      width: 90%;
+    }
+  }
+  .present__buttons {
+    display: inline-flex;
+  }
+
+  .present__div__buttons {
+    display: flex;
+    margin: 5px auto;
+    justify-content: center;
+    padding-bottom: 88px;
+  }
+}
+
+@media (min-width: 993px) {
+  .present__div__buttons {
+    padding-bottom: 48px;
+  }
+}

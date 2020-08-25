@@ -53,30 +53,22 @@ button {
 }
 
 .btn {
-  display: inline-block;
-  font-weight: bold;
-  white-space: nowrap;
-  color: #fff;
-  background: $mainColor;
+
   padding: 0.89em 2em;
   border-radius: 50px;
   border: 1px solid $mainColor;
-  user-select: none;
 
-  @include animate;
 
-  &:hover {
-    background: #fff;
-    color: $mainColor;
-  }
+
 }
 
 
 
 //@import "header";
 //
-//@import "present";
-//
+
+@import "present";
+
 @import "features";
 
 //@import "testimonials";
