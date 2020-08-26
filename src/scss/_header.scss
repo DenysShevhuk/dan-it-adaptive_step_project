@@ -1,6 +1,7 @@
 .container {
     @include container(1200px);
   }
+
   header{
     background: url("../img/head_bg.png") center / cover no-repeat;
     width: 100%;
@@ -12,6 +13,7 @@
     padding-top: 29px;
     align-items: center;
     justify-items: end;
+
     &__logo{
       display: flex;
       align-items: center;
@@ -23,12 +25,51 @@
         margin-left: 17px;
       }
     }
+
     &__logo:hover > img  {
      width: 43px;
      height: 42px;
      content: url("../img/favicon.png");
     }
+
     &__logo:hover > h1  {
       color: $mainColor;
     }
+
+  .nav__menu{
+    display: flex;
+
+    &_link{
+      font-weight: bold;
+      @include link;
+      color: $color_white;
+    }
+
+    &_link:hover{
+      color: $mainColor;
+    }
+    &__item{
+      margin-right: 48px;
+    }
+
+    &__button{
+      border-radius: 40px;
+      background-color: $mainColor;
+      width: 145px;
+      height: 38px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      color: $color_white;
+    }
+    
+    &__button:hover{
+      background-color: $color_white;
+      color: $mainColor;
+    }
   }
+}
