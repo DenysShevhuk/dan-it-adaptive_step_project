@@ -14,12 +14,12 @@
 @mixin container($width){
     width: $width;
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 0 10px;
   }
 
   @mixin containerMedia($width){
     max-width: $width;
-    padding: 0 auto;
+    padding: 0 10px;
   }
 
   @mixin fontChange($fz, $fw){
