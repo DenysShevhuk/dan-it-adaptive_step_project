@@ -1,0 +1,34 @@
+.container {
+    @include container(1200px);
+  }
+  header{
+    background: url("../img/head_bg.png") center / cover no-repeat;
+    width: 100%;
+  }
+
+  .nav{
+    display: grid;
+    grid-template-columns: 1fr 4fr 0.5fr;   
+    padding-top: 29px;
+    align-items: center;
+    justify-items: end;
+    &__logo{
+      display: flex;
+      align-items: center;
+      @include link;
+      &-title{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color_white;
+        margin-left: 17px;
+      }
+    }
+    &__logo:hover > img  {
+     width: 43px;
+     height: 42px;
+     content: url("../img/favicon.png");
+    }
+    &__logo:hover > h1  {
+      color: $mainColor;
+    }
+  }

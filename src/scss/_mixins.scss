@@ -1,3 +1,7 @@
+@mixin link {
+    text-decoration: none;
+    list-style: none;
+}
 
 @mixin fontFamilyLato () {
   font-family: "Lato", serif;
@@ -6,3 +10,21 @@
 @mixin animate {
   transition: all .3s ease-out;
 }
+
+@mixin container($width){
+    width: $width;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+
+  @mixin containerMedia($width){
+    max-width: $width;
+    padding: 0 auto;
+  }
+
+  @mixin fontChange($fz, $fw){
+    font-size: $fz;
+    font-weight: $fw;
+  }
+  
+  

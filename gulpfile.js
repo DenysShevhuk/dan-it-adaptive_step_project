@@ -83,7 +83,7 @@ function js() {
         .pipe(fileinclude())
         .pipe(gulp.dest(path.build.js))
         .pipe(uglify())
-        .pipe(concat('script.min.js'))
+        .pipe(concat('main.min.js'))
         // .pipe(rename({ extname: ".min.js" }))
         .pipe(gulp.dest(path.build.js))
         .pipe(browsersync.stream());
@@ -123,4 +123,3 @@ exports.img = img;
 
 exports.build = build;
 exports.default = dev;
-
