@@ -21,7 +21,7 @@ document.addEventListener('click', function (e) {
       return false
    }
    menu.classList.remove('active');
-   if(!close.classList.contains('active')){
+   if(!close.classList.contains('active')) {
       close.classList.add('disable');
       open.classList.add('active')
    }

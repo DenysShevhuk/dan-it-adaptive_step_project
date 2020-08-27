@@ -17,6 +17,7 @@ header {
    &__logo {
       display: flex;
       align-items: center;
+      justify-self: left;
       @include link;
 
       &-title {
@@ -38,8 +39,6 @@ header {
    }
 
    .nav__menu {
-      //display: flex;
-
       &_link {
          font-weight: bold;
          @include link;
@@ -48,10 +47,6 @@ header {
 
       &_link:hover {
          color: $mainColor;
-      }
-
-      &__item {
-         margin-right: 48px;
       }
 
       &__button {
@@ -74,6 +69,18 @@ header {
          color: $mainColor;
       }
   }
+}
+
+@media (max-width: 535px) {
+   .nav__menu__item {
+      margin-right: 18px;
+   }
+}
+
+@media (min-width: 535px) {
+   .nav__menu__item {
+      margin-right: 48px;
+   }
 }
  
 .title-part {
@@ -109,7 +116,6 @@ header {
       display: flex;
    }
 }
-
 
 @media (max-width: 1200px) {
    .container {
