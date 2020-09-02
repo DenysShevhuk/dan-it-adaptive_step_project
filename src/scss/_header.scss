@@ -1,10 +1,9 @@
-.container {
+   .container {
    @include container(1200px);
 }
 
 header {
    background: url("../img/head_bg.png") center / cover no-repeat;
-   width: 100%;
 }
 
 .nav {
@@ -39,6 +38,8 @@ header {
    }
 
    .nav__menu {
+      display: flex;
+      
       &_link {
          font-weight: bold;
          @include link;
@@ -109,12 +110,6 @@ header {
 
 .buttonsMobile {
   display: none;
-}
-
-@media (min-width: 480px) {
-   .nav__menu {
-      display: flex;
-   }
 }
 
 @media (max-width: 1200px) {
@@ -195,10 +190,10 @@ header {
 
 @media (max-width: 480px) {
    .container {
-      @include containerMedia(320px)
+      @include containerMedia(320px);
    }
 
-   .showMenu {
+   .showMenu { 
       display: inline-block;
       justify-self: end;
    }
@@ -210,11 +205,11 @@ header {
 
    .nav {
       position: relative;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 3fr);
+      grid-template-rows: 3fr;
       padding-bottom: 32px;
 
-      &__menu, &__logo-title {
+      .nav__menu, &__logo-title {
          display: none;
       }
 
@@ -222,9 +217,10 @@ header {
          position: absolute;
          z-index: 1;
          background-color: #333333;
-         top: 32px;
+         top: 20px;
          width: 300px;
          justify-self: baseline;
+         float: right; 
 
         &__item {
             text-align: left;  
