@@ -1,0 +1,350 @@
+   .container {
+   @include container(1200px);
+}
+
+header {
+   background: url("../img/head_bg.png") center / cover no-repeat;
+}
+
+.nav {
+   display: grid;
+   grid-template-columns: 1fr 4fr 0.5fr;   
+   padding-top: 29px;
+   align-items: center;
+   justify-items: end;
+
+   &__logo {
+      display: flex;
+      align-items: center;
+      justify-self: left;
+      @include link;
+
+      &-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color_white;
+        margin-left: 17px;
+      }
+   }
+
+   &__logo:hover > img  {
+     width: 43px;
+     height: 42px;
+     content: url("../img/favicon.png");
+   }
+
+   &__logo:hover > h1  {
+      color: $mainColor;
+   }
+
+   .nav__menu {
+      display: flex;
+      
+      &_link {
+         font-weight: bold;
+         @include link;
+         color: $color_white;
+      }
+
+      &_link:hover {
+         color: $mainColor;
+      }
+
+      &__button {
+         border-radius: 40px;
+         background-color: $mainColor;
+         width: 145px;
+         height: 38px;
+         cursor: pointer;
+         border: none;
+         outline: none;
+         font-family: "Montserrat", sans-serif;
+         font-style: normal;
+         font-weight: bold;
+         font-size: 16px;
+         color: $color_white;
+      }
+    
+      &__button:hover{
+         background-color: $color_white;
+         color: $mainColor;
+      }
+  }
+}
+
+@media (max-width: 535px) {
+   .nav__menu__item {
+      margin-right: 18px;
+   }
+}
+
+@media (min-width: 535px) {
+   .nav__menu__item {
+      margin-right: 48px;
+   }
+}
+ 
+.title-part {
+   padding: 127px 0 459px 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+
+  &__page {
+      @include fontChange(72px, bold);  
+      color: $color_white;
+      margin-bottom: 19px;
+   }
+
+  &__text {
+      color: $mainColor;
+      margin-bottom: 19px;
+      text-align: center;
+
+      &__after {
+         color: #848E97;
+      }
+   }
+}
+
+.buttonsMobile {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+   .container {
+   @include containerMedia(993px)
+   }
+}
+
+@media (max-width: 992px){
+   .container {
+   @include containerMedia(720px)
+   }
+
+   .nav {
+      display: grid;
+      justify-items: normal;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows:repeat(2, 1fr);
+      grid-template-areas:
+      'logo button'
+      'menu menu';
+
+      &__logo {
+        grid-area:logo ;
+      }
+
+      &__menu {
+         grid-area:menu ;
+         justify-self: center;
+
+         &__item:last-child {
+            margin-right: 0;
+         }
+
+         &__button {
+            grid-area: button;
+            justify-self: end;
+         }
+      }
+   }
+
+   .title-part {
+      padding-top: 69px;
+
+      &__page {
+         font-weight: bold;
+         font-size: 82px;
+         @include fontChange(72px, bold);
+      }
+
+      &__text {
+         @include fontChange(24px, normal);
+
+        &__after {
+          @include fontChange(14px, normal);
+        }
+      }
+   }
+}
+
+.showMenu {
+   display: none;
+   cursor: pointer;
+
+   &__first, &__second, &__third {
+      width: 26px;
+      height: 3px;
+      background-color: $color_white;
+      margin: 6px 0;
+      transition: 0.4s;
+   }
+
+   &__first {
+      width: 15px;
+      margin-left: 11px;
+   }
+}
+
+@media (max-width: 480px) {
+   .container {
+      @include containerMedia(320px);
+   }
+
+   .showMenu { 
+      display: inline-block;
+      justify-self: end;
+   }
+
+   .buttonsMobile {
+      justify-self: end;
+      display: block;
+   }
+
+   .nav {
+      position: relative;
+      grid-template-columns: repeat(3, 3fr);
+      grid-template-rows: 3fr;
+      padding-bottom: 32px;
+
+      .nav__menu, &__logo-title {
+         display: none;
+      }
+
+      &__menu {
+         position: absolute;
+         z-index: 1;
+         background-color: #333333;
+         top: 20px;
+         width: 300px;
+         justify-self: baseline;
+         float: right; 
+
+        &__item {
+            text-align: left;  
+            padding: 29px 0 21px 0;
+            margin: 0;
+            border-bottom: 3px solid #3a3a3a;
+         }
+
+        &_link {
+            @include fontChange(26px, bold);
+            color: $color_white;
+            padding: 10px 0 10px 22px;
+         }
+
+        &__item:hover > &_link{
+            color: $mainColor;
+            border-left: 8px solid $mainColor;
+         }
+      }
+
+      .active {
+        display: block;
+      }
+
+      &__menu__button {
+        width: 119px;
+        height: 37px;
+      }
+   }
+
+   .title-part {
+      padding-top: 50px;
+
+      &__page {
+        @include fontChange(48px, bold);
+      }
+
+      &__text {
+        @include fontChange(18px, normal);
+      }
+   }
+}
+
+.disable {
+   display: none;
+}
+
+.close-menu-icon {
+   position: absolute;
+   right: 0;
+   top: 32px;
+   width: 32px;
+   height: 22px;
+   opacity: 1;
+
+   &:before, &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: $color_white;
+   }
+
+   &:before {
+      transform: rotate(45deg);
+   }
+
+   &:after {
+      transform: rotate(-45deg);
+   }
+}
+
+.menu-icon {
+   position: relative;
+   width: 26px;
+   height: 3px;
+   background-color: #fff;
+   margin-right: 3px;
+  
+   &::before {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      content: '';
+      width: 18px;
+      margin-left: 8px;
+      height: 3px;
+      background-color: #fff;
+   }
+
+   &::after {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      content: '';
+      width: 26px;
+      height: 3px;
+      background-color: #fff;
+   }
+}
+
+.download {
+   color: $color_white;
+   display: block;
+   margin: 0 auto;
+   border: 2px solid $mainColor;
+   box-sizing: border-box;
+   border-radius: 40px;
+   padding: 18px 61px;
+   background-color: $mainColor;
+   outline: none;
+   cursor: pointer;
+   position: absolute;
+   bottom: -32px;
+
+   &:hover {
+      background-color: $color_white;
+      color: $mainColor;
+   }
+
+   @media (max-width: 480px) {
+      @include fontChange(18px, normal);
+      padding: 10px 29px;
+      bottom: -19px;
+   }
+}
