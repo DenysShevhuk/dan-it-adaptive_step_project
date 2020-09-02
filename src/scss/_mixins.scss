@@ -18,8 +18,9 @@
   }
 
   @mixin containerMedia($width){
-    max-width: $width;
+    width: $width;
     padding: 0 10px;
+    width: 100%;
   }
 
   @mixin fontChange($fz, $fw){
