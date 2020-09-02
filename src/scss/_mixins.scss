@@ -2,7 +2,9 @@
 @mixin fontFamilyLato () {
   font-family: "Lato", serif;
 }
-
+@mixin font-familyMontserrat(){
+  font-family: Montserrat, serif;
+}
 @mixin animate {
   transition: all .3s ease-out;
 }

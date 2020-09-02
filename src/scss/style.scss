@@ -29,7 +29,7 @@ button {
 
 .container {
   min-width: 320px;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .title {
@@ -53,13 +53,9 @@ button {
 }
 
 .btn {
-
   padding: 0.89em 2em;
   border-radius: 50px;
   border: 1px solid $mainColor;
-
-
-
 }
 
 
@@ -73,4 +69,5 @@ button {
 
 //@import "testimonials";
 //
-//@import "pricing";
+
+@import "pricing";

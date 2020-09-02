@@ -1,0 +1,267 @@
+@import "vars";
+@import "mixins";
+
+.pricing {
+  background-color: $backgroundPrixing;
+}
+.pricing_flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 457px;
+  margin: 0 auto;
+  grid-row-gap: 18px;
+  padding-bottom: 18px;
+}
+.item1 {
+  justify-self: center;
+}
+.item2 {
+  justify-self: center;
+}
+.item3 {
+  justify-self: center;
+}
+.item4 {
+  justify-self: center;
+}
+.container_pricing {
+  @include fontFamilyLato;
+
+  &_h {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 14px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    margin-bottom: 32px;
+    @include font-familyMontserrat;
+  }
+
+  &_sections {
+    background-color: #5F5161;
+    width: 257px;
+  }
+
+  &_name {
+    font-size: 24px;
+    line-height: 24px;
+    color: white;
+    width: 257px;
+    padding: 36px 0;
+    background-color: #685B6A;
+    text-transform: uppercase;
+    @include font-familyMontserrat;
+  }
+
+  &_cost {
+    font-size: 60px;
+    line-height: 62px;
+    font-weight: 700;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    @include font-familyMontserrat;
+  }
+
+  &_term {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+    @include font-familyMontserrat;
+  }
+
+  &_hr {
+    width: 60px;
+    border: 3px solid;
+    color: #8D81AC;
+  }
+
+  &_license {
+    color: white;
+    font-size: 16px;
+    line-height: 28px;
+    @include font-familyMontserrat;
+    margin: 30px 23px;
+  }
+
+  &_btn {
+    font-size: 15px;
+    line-height: 15px;
+    margin-top: 37px;
+
+  }
+}
+.container_pricing_license_item1 {
+  color: white;
+  font-size: 16px;
+  line-height: 28px;
+  @include font-familyMontserrat;
+  margin: 30px 23px;
+}
+.container_pricing_sections_hover {
+  width: 299px;
+  background-color: #413344;
+  justify-self: center;
+}
+
+.container_pricing_name_hover {
+  background-color: #3A2D3D;
+  width: 299px;
+  height: 111px;
+  color: white;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2em 0;
+  @include font-familyMontserrat;
+}
+
+.container_pricing_cost_hover {
+  font-size: 82px;
+  line-height: 90px;
+  font-weight: 700;
+  color: white;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  @include font-familyMontserrat;
+}
+
+.container_pricing_btn_hover {
+  margin-top: 83px;
+}
+
+.pricing_btn_hover {
+  font-size: 16px;
+  background-color: #776B79;
+  border-radius: 50px;
+  border: 1px solid #776B79;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 1em 4em;
+  @include font-familyMontserrat;
+  @include animate;
+  outline: none;
+  margin-bottom: 47px;
+
+  &:hover {
+    background-color: #D2CCD0;
+    color: #7F6D78;
+  }
+}
+
+.pricing_btn {
+  font-size: 14px;
+  background-color: #776B79;
+  border-radius: 50px;
+  border: 1px solid #776B79;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 0.89em 3em;
+  @include font-familyMontserrat;
+  @include animate;
+  outline: none;
+  margin-bottom: 39px;
+
+
+
+  &:hover {
+    background-color: #D2CCD0;
+    color: #7F6D78;
+  }
+
+}
+
+
+@media (min-width: 481px) {
+
+  .container_pricing_h {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 44px;
+    padding-top: 88px;
+
+  }
+  .container_pricing_sections_hover {
+    width: 299px;
+    background-color: #413344;
+  }
+
+  .pricing_flex {
+    display: grid;
+    grid-template-columns: 257px 257px;
+    grid-template-rows: 457px;
+    grid-column-gap: 25px;
+    grid-row-gap: 71px;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 137px;
+
+  }
+
+  .item1 {
+    justify-self: center;
+  }
+  .item2 {
+    justify-self: center;
+
+  }
+  .item3 {
+    justify-self: center;
+  }
+  .item4 {
+    justify-self: center;
+    align-self: center;
+  }
+  .container_pricing_sections_hover {
+    margin-right: 35px;
+  }
+  .container_pricing_license_item1 {
+    color: white;
+    font-size: 16px;
+    line-height: 28px;
+    @include font-familyMontserrat;
+    margin: 30px  23px 65px 23px;
+  }
+}
+
+
+@media (min-width: 993px) {
+  .pricing_flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 299px 1fr;
+    grid-column-gap: 15px;
+    align-content: center;
+    justify-content: center;
+
+  }
+  .container_pricing_h {
+    font-size: 48px;
+    line-height: 50px;
+    padding-top: 112px;
+    margin-bottom: 112px;
+  }
+  .item1 {
+    justify-self: center;
+    align-self: center;
+  }
+  .item2 {
+    justify-self: center;
+    align-self: center;
+  }
+  .item3 {
+    justify-self: center;
+    align-self: center;
+  }
+  .item4 {
+    justify-self: center;
+  }
+  .container_pricing_sections_hover {
+    margin-right: 0;
+  }
+
+}
+

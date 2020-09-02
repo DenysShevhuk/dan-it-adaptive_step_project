@@ -72,7 +72,7 @@ function css() {
         .pipe(gulp.dest(path.build.css))
         .pipe(cleancss())
         .pipe(concat('styles.min.css'))
-        // .pipe(rename({ extname: ".min.css" }))
+        .pipe(rename({ extname: ".css" }))
         .pipe(gulp.dest(path.build.css))
         .pipe(browsersync.stream());
 }
@@ -84,7 +84,7 @@ function js() {
         .pipe(gulp.dest(path.build.js))
         .pipe(uglify())
         .pipe(concat('scripts.min.js'))
-        // .pipe(rename({ extname: ".min.js" }))
+        .pipe(rename({ extname: ".js" }))
         .pipe(gulp.dest(path.build.js))
         .pipe(browsersync.stream());
 }
