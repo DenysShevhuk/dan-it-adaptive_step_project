@@ -1,33 +1,31 @@
 @mixin link {
-    text-decoration: none;
-    list-style: none;
+   text-decoration: none;
+   list-style: none;
 }
 
 @mixin fontFamilyLato () {
-  font-family: "Lato", serif;
+   font-family: "Lato", serif;
 }
 @mixin font-familyMontserrat(){
-  font-family: Montserrat, serif;
+   font-family: Montserrat, serif;
 }
 @mixin animate {
-  transition: all .3s ease-out;
+   transition: all .3s ease-out;
 }
 
 @mixin container($width){
-    width: $width;
-    margin: 0 auto;
-    padding: 0 10px;
+   Width: $width;
+   margin: 0 auto;
+   padding: 0 10px;
   }
 
-  @mixin containerMedia($width){
-    width: $width;
-    padding: 0 10px;
-    width: 100%;
-  }
+@mixin containerMedia($width){
+   width: $width;
+   padding: 0 10px;
+   width: 100%;
+}
 
-  @mixin fontChange($fz, $fw){
-    font-size: $fz;
-    font-weight: $fw;
-  }
-  
-  
+@mixin fontChange($fz, $fw){
+   font-size: $fz;
+   font-weight: $fw;
+}
