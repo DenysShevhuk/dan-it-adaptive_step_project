@@ -3,6 +3,7 @@
 
 .pricing {
   background-color: $backgroundPrixing;
+
 }
 .pricing_flex {
   display: grid;
@@ -177,6 +178,10 @@
 
 
 @media (min-width: 481px) {
+  .pricing {
+    background: url("../img/Layer 2-3.png");
+
+  }
 
   .container_pricing_h {
     font-weight: bold;
